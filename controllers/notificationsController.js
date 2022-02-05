@@ -38,7 +38,7 @@ const send = (subscription, recipeName, recipeId) => {
     title: "A new recipe is available ! 👨‍🍳",
     icon: "/assets/icons/icon-128x128.png",
     body: recipeName,
-    data: { url: `http://localhost:5000/recipes/${recipeId}` },
+    data: { url: `${process.env.REACT_APP_URL}/recipes/${recipeId}` },
     vibrate: [
       500, 110, 500, 110, 450, 110, 200, 110, 170, 40, 450, 110, 200, 110, 170,
       40, 500,
